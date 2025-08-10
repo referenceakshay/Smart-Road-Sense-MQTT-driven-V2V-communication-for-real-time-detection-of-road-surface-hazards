@@ -1,0 +1,11 @@
+from ultralytics import YOLO
+import torch
+from torch.utils.data import DataLoader, Dataset
+from lstm_model import YOLOv8_LSTM
+
+# Step 1: Train YOLOv8 for detection
+model = YOLO('yolov8n.pt')
+model.train(data='data.yaml', epochs=50, imgsz=640)
+
+# Step 2: Extract features from YOLO and train LSTM
+# (This would require a dataset loader to feed YOLO features into LSTM)
