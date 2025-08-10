@@ -1,0 +1,5 @@
+train: merged_dataset/images/train
+val: merged_dataset/images/val
+
+nc: 2
+names: ['pothole', 'waterlog']
